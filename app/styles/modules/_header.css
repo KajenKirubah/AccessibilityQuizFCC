@@ -1,0 +1,61 @@
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5rem;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+
+    &__title {
+        color: #f1be32;
+        font-size: min(5vw, 1.2em);
+
+        @mixin atSmall {
+            text-align: center;
+        }
+    }
+
+    &__nav {
+        display: none;
+
+
+        @mixin atSmall {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-inline-start: 0;
+            margin-block: 0;
+            height: 100%;
+        }
+        
+        li {
+            color: #dfdfe2;
+            margin: 0 0.4rem;
+            padding: 0.4rem;
+            display: block;
+
+            a {
+                text-decoration: none;
+            }
+
+            @mixin atSmall {
+                margin: 0 0.2rem;
+                padding: 0.2rem;
+            }
+        }
+
+    }
+
+    &__nav * {
+        color: inherit;
+    }
+
+    @mixin atSmall {
+        padding: 0 2rem;
+    }
+}

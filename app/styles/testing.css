@@ -1,0 +1,62 @@
+#hamnav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  #hamnav label {
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  
+  #hamnav input[type="checkbox"] {
+    display: none;
+  }
+  
+  #hamnav #hamitems {
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #hamnav input[type="checkbox"]:checked ~ #hamitems {
+    display: flex;
+  }
+  
+  #hamnav #hamitems a {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .modal-content a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+  }

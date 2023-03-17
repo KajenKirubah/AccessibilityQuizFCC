@@ -1,0 +1,13 @@
+.hamburger {
+    display: block;
+
+    &__line {
+        width: 20px;
+        height: 1px;
+        margin-bottom: 5px;
+        background-color: #fff;
+    }
+    @mixin atSmall {
+        display: none;
+    }
+}
