@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>Building Quiz</title>
+  <script defer src="app.ea9bf3866b66b783ea79.js"></script><link href="styles.3efec46ec3c63c56e04a.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="" />
+      <h1 class="header__title">HTML/CSS Quiz</h1>
+      <nav>
+        <ul class="header__nav">
+          <li><a href="#student-info" accesskey="s">INFO</a></li>
+          <li><a href="#html-questions" accesskey="d">HTML</a></li>
+          <li><a href="#css-questions" accesskey="f">CSS</a></li>
+        </ul>
+       
+      </nav>
+      <div class="hamburger">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+    </div>
+    </header>
+    <main>
+      <form action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <section class="section" role="region" aria-labelledby="student-info">
+          <h2 class="section__title" id="student-info">Student Info</h2>
+          <div class="section__info">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" />
+          </div>
+          <div class="section__info">
+            <label for="emailaddress">Email</label>
+            <input id="emailaddress" type="email" name="emailaddress" />
+          </div>
+          <div class="section__info">
+            <label for="bdate">D.O.B<span class="section__sr-only">(Date of Birth)</span></label>
+            <input id="bdate" type="date" name="bdate" />
+          </div>
+        </section>
+        <section class="section" role="region" aria-labelledby="html-questions">
+          <h2 class="section__title" id="html-questions">HTML</h2>
+          <div class="section__question-block">
+            <p>1</p>
+            <fieldset class="section__question" name="question1">
+              <legend>The legend element represents a caption for the content of its parent fieldset element</legend>
+              <ul class="section__answers-list">
+                <li>
+                  <label for="q1-a1">
+                    <input type="radio" name="q1" id="q1-a1" value="true"/>True
+                </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <input type="radio" name="q1" id="q1-a2" value="false"/>False
+                </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="section__question-block">
+            <p>2</p>
+            <fieldset class="section__question" name="question2">
+              <legend>A label element nesting an input element is required to have a for attribute with the same value as the input's id</legend>
+              <ul class="section__answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input type="radio" name="q2" id="q2-a1" value="true"/>True
+                </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input type="radio" name="q2" id="q2-a2" value="false"/>False
+                </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <section class="section" role="region" aria-labelledby="css-questions">
+          <h2 class="section__title" id="css-questions">CSS</h2>
+          <div class="formrow">
+            <div class="formrow__question-block">
+                <label for="fdev">Are you a frontend developer?</label>
+            </div>
+            <div class="formrow__answer">
+                <select name="fdev" id="fdev" required>
+                    <option value="">Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="formrow__question-block">
+                <label for="anyquestions">Do you have any questions:</label>
+            </div>
+            <div class="formrow__answer">
+                <textarea name="anyquestions" id="anyquestions" cols="30" rows="10" placeholder="sipping pinacolada on the beach"></textarea>
+            </div>
+          </div>
+        </section>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </main>
+    <footer class="footer">
+        <address class="footer__address">
+            <a href="https://freecodecamp.org">freeCodeCamp</a><br />   
+San Francisco<br />
+California<br />
+USA
+        </address>
+    </footer>
+  </body>
+</html>
